@@ -12,6 +12,12 @@
         android:theme="@style/Theme.ZadanieMies"
         tools:targetApi="31">
         <activity
+            android:name=".Info_uzytkownika"
+            android:exported="false" />
+        <activity
+            android:name=".Tabela"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

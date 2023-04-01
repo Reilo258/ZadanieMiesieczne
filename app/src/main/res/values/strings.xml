@@ -1,14 +1,14 @@
 <resources>
     <string name="app_name">ZadanieMies</string>
-        <string name="action_settings">Settings</string>
-        <string name="action_share">Share</string>
-        <string name="action_exit">Exit</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_share">Share</string>
+    <string name="action_exit">Exit</string>
 
-        <string name="btn_main_page">Strona Główna</string>
-        <string name="btn_ocena">Oceny</string>
-        <string name="btn_info">Informacje</string>
-        <string name="btn_quit">Zamknij</string>
+    <string name="str_glowna">Strona Główna</string>
+    <string name="str_ocena">Oceny</string>
+    <string name="str_info">Informacje</string>
+    <string name="str_quit">Zamknij</string>
 
-        <string name="Textview_username">User Name</string>
-        <string name="Textview_text_welcome">Witaj,</string>
+    <string name="Textview_username">Olivier van Overveld</string>
+    <string name="Textview_text_welcome">Cześć,</string>
 </resources>

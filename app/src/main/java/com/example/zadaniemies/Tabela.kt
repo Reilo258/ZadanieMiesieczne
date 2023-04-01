@@ -9,9 +9,10 @@ import android.widget.ImageView
 import android.widget.Toast
 import com.google.android.material.navigation.NavigationView
 
-class MainActivity : AppCompatActivity() {
+class Tabela : AppCompatActivity() {
 
     private var isNavOpen = false
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -31,15 +32,16 @@ class MainActivity : AppCompatActivity() {
         }
 
 
+
         // przejscie do strony głównej
         findViewById<Button>(R.id.btn_main_page).setOnClickListener {
-            Toast.makeText(this, "Jesteś już na stronie głównej", Toast.LENGTH_SHORT).show()
+            startActivity(Intent(this, MainActivity::class.java))
+            Toast.makeText(this, "Przeniesiono do strony głównej", Toast.LENGTH_SHORT).show()
         }
 
         // przejscie do strony z tabelami
         findViewById<Button>(R.id.btn_ocena).setOnClickListener {
-            startActivity(Intent(this, Tabela::class.java))
-            Toast.makeText(this, "Przeniesiono do tabeli z ocenami", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Jesteś już w tabeli z ocenami", Toast.LENGTH_SHORT).show()
         }
 
         // przejscie do strony z informacjami o uzytkowniku
