@@ -6,16 +6,16 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.ImageView
+import android.widget.LinearLayout
 import android.widget.Toast
 import com.google.android.material.navigation.NavigationView
 
 class Tabela : AppCompatActivity() {
 
-    private var isNavOpen = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_tabela)
 
         supportActionBar?.hide() // ukrycie toolbara
 
