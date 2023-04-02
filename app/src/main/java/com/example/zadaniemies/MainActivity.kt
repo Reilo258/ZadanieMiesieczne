@@ -38,20 +38,16 @@ class MainActivity : AppCompatActivity() {
 
         // przejscie do strony z tabelami
         findViewById<Button>(R.id.btn_ocena).setOnClickListener {
-            if(logged) {
-                startActivity(Intent(this, Tabela::class.java))
-                Toast.makeText(this, "Przeniesiono do tabeli z ocenami", Toast.LENGTH_SHORT).show()
-            }
+            if(logged)
+                startActivity(Intent(this, Tabela::class.java).putExtra("In_user", Info_User))
             else
                 Toast.makeText(this, "Musisz się zalogować", Toast.LENGTH_SHORT).show()
         }
 
         // przejscie do strony z informacjami o uzytkowniku
         findViewById<Button>(R.id.btn_info).setOnClickListener {
-            if(logged) {
-                startActivity(Intent(this, Info_uzytkownika::class.java))
-                Toast.makeText(this, "Przeniesiono do strony z informacjami", Toast.LENGTH_SHORT).show()
-            }
+            if(logged)
+                startActivity(Intent(this, Info_uzytkownika::class.java).putExtra("In_user", Info_User))
             else
                 Toast.makeText(this, "Musisz się zalogować", Toast.LENGTH_SHORT).show()
         }
@@ -74,8 +70,6 @@ class MainActivity : AppCompatActivity() {
                 Info_User[1] = login
                 Info_User[2] = password
                 Info_User[3] = klasa
-
-
 
                 findViewById<LinearLayout>(R.id.Form_login).visibility = View.GONE
                 Toast.makeText(this, "Zalogowano", Toast.LENGTH_SHORT).show()

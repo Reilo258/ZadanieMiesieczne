@@ -36,7 +36,6 @@ class Tabela : AppCompatActivity() {
         // przejscie do strony głównej
         findViewById<Button>(R.id.btn_main_page).setOnClickListener {
             startActivity(Intent(this, MainActivity::class.java))
-            Toast.makeText(this, "Przeniesiono do strony głównej", Toast.LENGTH_SHORT).show()
         }
 
         // przejscie do strony z tabelami
@@ -47,7 +46,6 @@ class Tabela : AppCompatActivity() {
         // przejscie do strony z informacjami o uzytkowniku
         findViewById<Button>(R.id.btn_info).setOnClickListener {
             startActivity(Intent(this, Info_uzytkownika::class.java))
-            Toast.makeText(this, "Przeniesiono do strony z informacjami", Toast.LENGTH_SHORT).show()
         }
     }
 }
