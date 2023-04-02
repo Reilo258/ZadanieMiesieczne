@@ -17,6 +17,13 @@ class MainActivity : AppCompatActivity() {
         var Info_User = arrayOf("","","","")
 
         supportActionBar?.hide() // ukrycie toolbara
+        val Info = intent.getStringArrayExtra("In_user") // odczytanie tablicy z informacjami o uzytkowniku
+
+        if(Info != null) {
+            logged = true
+            Info_User = Info
+            findViewById<LinearLayout>(R.id.Form_login).visibility = View.GONE
+        }
 
         // zamknięcie toolbara
         findViewById<Button>(R.id.btn_quit).setOnClickListener {

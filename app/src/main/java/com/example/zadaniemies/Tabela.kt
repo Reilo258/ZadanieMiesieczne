@@ -11,13 +11,12 @@ import android.widget.Toast
 import com.google.android.material.navigation.NavigationView
 
 class Tabela : AppCompatActivity() {
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_tabela)
 
         supportActionBar?.hide() // ukrycie toolbara
+        val Info_User = intent.getStringArrayExtra("In_user") // odczytanie tablicy z informacjami o uzytkowniku
 
         // zamknięcie toolbara
         findViewById<Button>(R.id.btn_quit).setOnClickListener {
@@ -35,7 +34,7 @@ class Tabela : AppCompatActivity() {
 
         // przejscie do strony głównej
         findViewById<Button>(R.id.btn_main_page).setOnClickListener {
-            startActivity(Intent(this, MainActivity::class.java))
+            startActivity(Intent(this, MainActivity::class.java).putExtra("In_user", Info_User))
         }
 
         // przejscie do strony z tabelami
@@ -45,7 +44,7 @@ class Tabela : AppCompatActivity() {
 
         // przejscie do strony z informacjami o uzytkowniku
         findViewById<Button>(R.id.btn_info).setOnClickListener {
-            startActivity(Intent(this, Info_uzytkownika::class.java))
+            startActivity(Intent(this, Info_uzytkownika::class.java).putExtra("In_user", Info_User))
         }
     }
 }

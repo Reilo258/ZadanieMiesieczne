@@ -8,7 +8,6 @@ import android.widget.*
 import com.google.android.material.navigation.NavigationView
 
 class Info_uzytkownika : AppCompatActivity() {
-    private var isNavOpen = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,12 +31,12 @@ class Info_uzytkownika : AppCompatActivity() {
 
         // przejscie do strony głównej
         findViewById<Button>(R.id.btn_main_page).setOnClickListener {
-            startActivity(Intent(this, MainActivity::class.java))
+            startActivity(Intent(this, MainActivity::class.java).putExtra("In_user", Info_User))
         }
 
         // przejscie do strony z tabelami
         findViewById<Button>(R.id.btn_ocena).setOnClickListener {
-            startActivity(Intent(this, Tabela::class.java))
+            startActivity(Intent(this, Tabela::class.java).putExtra("In_user", Info_User))
         }
 
         // przejscie do strony z informacjami o uzytkowniku
